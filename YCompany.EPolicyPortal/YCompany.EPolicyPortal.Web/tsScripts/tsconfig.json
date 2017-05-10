@@ -1,0 +1,27 @@
+//All TS files present in tsScripts folder will be transpiled using commonjs module to outDir (Output Directory) by keeping comments, sourceMap intact”
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "../Scripts/",
+    "moduleResolution": "node",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules",
+      "../typings/globals"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+    //,"wwwroot"
+  ]
+}
