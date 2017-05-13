@@ -1,29 +1,34 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using YCompany.EPolicyPortal.PersistenceLayer.Context;
+using YCompany.EPolicyPortal.PersistenceLayer.Repository;
 
-namespace YCompany.EPolicyPortal.PersistenceLayer
+namespace YCompany.EPolicyPortal.PersistenceLayer.UnitOfWork
 {
-    public class UnitOfWork : IDisposable
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly EPolicyPortalContext context = new EPolicyPortalContext();
-
+        
         public Dictionary<Type, object> repositories = new Dictionary<Type, object>();
-
+        
         /// <summary>
         /// Method to get repository 
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public GenericRepository<T> Repository<T>() where T : class
+        public IGenericRepository<T> Repository<T>() where T : class
         {
             if (repositories.Keys.Contains(typeof(T)))
             {
-                return repositories[typeof (T)] as GenericRepository<T>;
+                return repositories[typeof (T)] as IGenericRepository<T>;
             }
-            GenericRepository<T> repo = new GenericRepository<T>(context);
-            repositories.Add(typeof(T), repo);
-            return repo;
+
+            IGenericRepository<T> repository = new GenericRepository<T>(context);
+
+            Type repositoryType = typeof (T);
+            repositories.Add(repositoryType, repository);
+            return repository;
         }
 
         public void Save()

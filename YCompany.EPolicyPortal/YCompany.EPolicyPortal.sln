@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.BusinessModel", "YCompany.EPolicyPortal.BusinessModel\YCompany.EPolicyPortal.BusinessModel.csproj", "{ECD7F1B0-28AA-4C05-871A-A5F084919270}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.BusinessLayer", "YCompany.EPolicyPortal.BusinessModel\YCompany.EPolicyPortal.BusinessLayer.csproj", "{ECD7F1B0-28AA-4C05-871A-A5F084919270}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{5D951E4F-3301-4A2B-8AB1-87EF036F50CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service Layer", "Service Layer", "{6B83A317-8FF2-49C2-A8AD-9CCC81BDBAF7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedServices", "SharedServices", "{DD5BF3F6-4649-49A9-A790-22A476C14830}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{DD5BF3F6-4649-49A9-A790-22A476C14830}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationLayer", "PresentationLayer", "{CE11C9C3-C514-46D7-9CEE-D5C511BA67CB}"
 EndProject
@@ -25,6 +25,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.NotificationService", "YCompany.EPolicyPortal.NotificationService\YCompany.EPolicyPortal.NotificationService.csproj", "{165F0FA6-E7D6-4497-8EAB-BF9E5A041A82}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.Web", "YCompany.EPolicyPortal.Web\YCompany.EPolicyPortal.Web.csproj", "{FB10E77A-F825-4D99-A8B1-F79094D6C45F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.DTO", "YCompany.EPolicyPortal.DTO\YCompany.EPolicyPortal.DTO.csproj", "{C46405BD-371D-4D16-9422-AB5374A32A4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +54,10 @@ Global
 		{FB10E77A-F825-4D99-A8B1-F79094D6C45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB10E77A-F825-4D99-A8B1-F79094D6C45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB10E77A-F825-4D99-A8B1-F79094D6C45F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C46405BD-371D-4D16-9422-AB5374A32A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C46405BD-371D-4D16-9422-AB5374A32A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C46405BD-371D-4D16-9422-AB5374A32A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C46405BD-371D-4D16-9422-AB5374A32A4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

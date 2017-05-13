@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using YCompany.EPolicyPortal.PersistenceLayer.Context;
 
-namespace YCompany.EPolicyPortal.PersistenceLayer
+namespace YCompany.EPolicyPortal.PersistenceLayer.Repository
 {
-    public class GenericRepository<TEntity> where TEntity : class
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         internal EPolicyPortalContext context;
         internal DbSet<TEntity> dbSet;
