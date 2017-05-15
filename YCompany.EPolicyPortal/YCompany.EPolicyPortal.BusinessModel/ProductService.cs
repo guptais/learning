@@ -10,15 +10,14 @@ namespace YCompany.EPolicyPortal.BusinessModel
     public class ProductService : IProductService
     {
         private readonly IUnitOfWorkFactory _unitOfWorkFactory;
-        //private readonly IMapper _mapper;
 
         public ProductService(IUnitOfWorkFactory unitOfWorkFactory)
         {
             _unitOfWorkFactory = unitOfWorkFactory;
-            //var config = new MapperConfiguration(cfg => {
-            //    cfg.CreateMap<Product, InsurancePolicy>();
-            //    cfg.AddProfile<FooProfile>();
-            //});
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<Product, InsurancePolicy>();
+            });
         }
 
         public IEnumerable<InsurancePolicy> GetAllProducts()
