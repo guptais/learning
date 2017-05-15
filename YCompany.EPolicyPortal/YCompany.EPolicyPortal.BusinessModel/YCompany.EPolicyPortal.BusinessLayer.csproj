@@ -98,10 +98,6 @@
       <Project>{c46405bd-371d-4d16-9422-ab5374a32a4d}</Project>
       <Name>YCompany.EPolicyPortal.DTO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\YCompany.EPolicyPortal.NotificationService\YCompany.EPolicyPortal.NotificationService.csproj">
-      <Project>{165f0fa6-e7d6-4497-8eab-bf9e5a041a82}</Project>
-      <Name>YCompany.EPolicyPortal.NotificationService</Name>
-    </ProjectReference>
     <ProjectReference Include="..\YCompany.EPolicyPortal.PersistenceLayer\YCompany.EPolicyPortal.PersistenceLayer.csproj">
       <Project>{a548781c-9947-42fb-a080-b79e4878352c}</Project>
       <Name>YCompany.EPolicyPortal.PersistenceLayer</Name>

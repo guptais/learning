@@ -1,15 +1,12 @@
 ﻿namespace YCompany.EPolicyPortal.PersistenceLayer.Entities
 {
-    public enum UserType
+    public class InternalUser : UserBase
     {
-        Admin,
-        Agent,
-        Underwriter,
-        Auditor,
-        Biller
+        
     }
-    public class InternalUser
+
+    public class AgentUser : UserBase
     {
-        public UserType Type;
+        
     }
 }

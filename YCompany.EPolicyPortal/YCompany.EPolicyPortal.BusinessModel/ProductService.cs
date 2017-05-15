@@ -2,20 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using Microsoft.Practices.ObjectBuilder2;
 using YCompany.EPolicyPortal.DTO;
 using YCompany.EPolicyPortal.PersistenceLayer.Entities;
-using YCompany.EPolicyPortal.PersistenceLayer.UnitOfWork;
 
 namespace YCompany.EPolicyPortal.BusinessModel
 {
     public class ProductService : IProductService
     {
         private readonly IUnitOfWorkFactory _unitOfWorkFactory;
+        //private readonly IMapper _mapper;
 
         public ProductService(IUnitOfWorkFactory unitOfWorkFactory)
         {
             _unitOfWorkFactory = unitOfWorkFactory;
+            //var config = new MapperConfiguration(cfg => {
+            //    cfg.CreateMap<Product, InsurancePolicy>();
+            //    cfg.AddProfile<FooProfile>();
+            //});
         }
 
         public IEnumerable<InsurancePolicy> GetAllProducts()

@@ -1,7 +1,9 @@
+using System.Web.Http;
 using System.Web.Mvc;
 using Microsoft.Practices.Unity;
-using Unity.Mvc5;
 using YCompany.EPolicyPortal.BusinessModel;
+
+//using Unity.Mvc5;
 
 namespace YCompany.EPolicyPortal.ServiceLayer
 {
@@ -13,11 +15,12 @@ namespace YCompany.EPolicyPortal.ServiceLayer
             
             // register all your components with the container here
             // it is NOT necessary to register your controllers
-            
-            // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IProductService, ProductService>();
             container.RegisterType<IUnitOfWorkFactory, UnitOfWorkFactory>();
-            DependencyResolver.SetResolver(new UnityDependencyResolver(container));
+            //in case of mvc5 web application this is important
+            DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
+            //in case of WEB API this is important
+            GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
         }
     }
 }

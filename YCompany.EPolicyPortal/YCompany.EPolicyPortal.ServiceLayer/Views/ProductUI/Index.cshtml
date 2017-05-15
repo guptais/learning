@@ -1,0 +1,35 @@
+﻿@model IEnumerable<YCompany.EPolicyPortal.DTO.InsurancePolicy>
+@{
+    ViewBag.Title = "Insurance Products";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName);
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SumAssured);
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimePeriod);
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumAssured)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimePeriod)
+            </td>
+        </tr>
+    }
+</table>
