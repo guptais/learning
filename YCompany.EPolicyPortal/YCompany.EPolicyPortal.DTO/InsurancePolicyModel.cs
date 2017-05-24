@@ -1,6 +1,6 @@
-﻿namespace YCompany.EPolicyPortal.DTO
+﻿namespace YCompany.EPolicyPortal.DataModel
 {
-    public class InsurancePolicy
+    public class InsurancePolicyModel
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }

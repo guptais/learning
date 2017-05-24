@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service Layer", "Service Layer", "{6B83A317-8FF2-49C2-A8AD-9CCC81BDBAF7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{DD5BF3F6-4649-49A9-A790-22A476C14830}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared Services", "Shared Services", "{DD5BF3F6-4649-49A9-A790-22A476C14830}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationLayer", "PresentationLayer", "{CE11C9C3-C514-46D7-9CEE-D5C511BA67CB}"
 EndProject
@@ -24,9 +24,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.Web", "YCompany.EPolicyPortal.Web\YCompany.EPolicyPortal.Web.csproj", "{FB10E77A-F825-4D99-A8B1-F79094D6C45F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.DTO", "YCompany.EPolicyPortal.DTO\YCompany.EPolicyPortal.DTO.csproj", "{C46405BD-371D-4D16-9422-AB5374A32A4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.DataModel", "YCompany.EPolicyPortal.DTO\YCompany.EPolicyPortal.DataModel.csproj", "{C46405BD-371D-4D16-9422-AB5374A32A4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.NotificationService", "YCompany.EPolicyPortal.NotificationService\YCompany.EPolicyPortal.NotificationService.csproj", "{165F0FA6-E7D6-4497-8EAB-BF9E5A041A82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PersistenceLayer", "PersistenceLayer", "{489545F4-DF2C-497E-BA9C-A9513D70102C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.ConfigurationManagement", "YCompany.EPolicyPortal.ConfigurationManagement\YCompany.EPolicyPortal.ConfigurationManagement.csproj", "{FBF12763-D611-467D-94A5-0627B20222E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YCompany.EPolicyPortal.ErrorHandling", "YCompany.EPolicyPortal.ErrorHandling\YCompany.EPolicyPortal.ErrorHandling.csproj", "{ACF89356-2A53-4E8F-AD84-2D2CE78E13E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdPartyServices", "ThirdPartyServices", "{BEDC8776-1328-4606-A732-67EA2698142A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdPartyServices", "ThirdPartyServices\ThirdPartyServices.csproj", "{66D7DE26-4AD8-4518-BA8D-EF57099748A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,15 +68,31 @@ Global
 		{165F0FA6-E7D6-4497-8EAB-BF9E5A041A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{165F0FA6-E7D6-4497-8EAB-BF9E5A041A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{165F0FA6-E7D6-4497-8EAB-BF9E5A041A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF12763-D611-467D-94A5-0627B20222E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF12763-D611-467D-94A5-0627B20222E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF12763-D611-467D-94A5-0627B20222E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF12763-D611-467D-94A5-0627B20222E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF89356-2A53-4E8F-AD84-2D2CE78E13E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF89356-2A53-4E8F-AD84-2D2CE78E13E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF89356-2A53-4E8F-AD84-2D2CE78E13E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF89356-2A53-4E8F-AD84-2D2CE78E13E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D7DE26-4AD8-4518-BA8D-EF57099748A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D7DE26-4AD8-4518-BA8D-EF57099748A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D7DE26-4AD8-4518-BA8D-EF57099748A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D7DE26-4AD8-4518-BA8D-EF57099748A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ECD7F1B0-28AA-4C05-871A-A5F084919270} = {5D951E4F-3301-4A2B-8AB1-87EF036F50CE}
+		{A548781C-9947-42FB-A080-B79E4878352C} = {489545F4-DF2C-497E-BA9C-A9513D70102C}
 		{54404A6C-E34A-4293-A1B1-F0ADB6785CFE} = {6B83A317-8FF2-49C2-A8AD-9CCC81BDBAF7}
 		{FB10E77A-F825-4D99-A8B1-F79094D6C45F} = {CE11C9C3-C514-46D7-9CEE-D5C511BA67CB}
 		{C46405BD-371D-4D16-9422-AB5374A32A4D} = {DD5BF3F6-4649-49A9-A790-22A476C14830}
 		{165F0FA6-E7D6-4497-8EAB-BF9E5A041A82} = {DD5BF3F6-4649-49A9-A790-22A476C14830}
+		{FBF12763-D611-467D-94A5-0627B20222E6} = {DD5BF3F6-4649-49A9-A790-22A476C14830}
+		{ACF89356-2A53-4E8F-AD84-2D2CE78E13E5} = {DD5BF3F6-4649-49A9-A790-22A476C14830}
+		{66D7DE26-4AD8-4518-BA8D-EF57099748A7} = {BEDC8776-1328-4606-A732-67EA2698142A}
 	EndGlobalSection
 EndGlobal

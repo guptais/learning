@@ -88,15 +88,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IProductService.cs" />
-    <Compile Include="IUnitOfWorkFactory.cs" />
+    <Compile Include="UowDependency\IUnitOfWorkFactory.cs" />
     <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitOfWorkFactory.cs" />
+    <Compile Include="UowDependency\UnitOfWorkFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YCompany.EPolicyPortal.DTO\YCompany.EPolicyPortal.DTO.csproj">
+    <ProjectReference Include="..\ThirdPartyServices\ThirdPartyServices.csproj">
+      <Project>{66d7de26-4ad8-4518-ba8d-ef57099748a7}</Project>
+      <Name>ThirdPartyServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YCompany.EPolicyPortal.DTO\YCompany.EPolicyPortal.DataModel.csproj">
       <Project>{c46405bd-371d-4d16-9422-ab5374a32a4d}</Project>
-      <Name>YCompany.EPolicyPortal.DTO</Name>
+      <Name>YCompany.EPolicyPortal.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YCompany.EPolicyPortal.ErrorHandling\YCompany.EPolicyPortal.ErrorHandling.csproj">
+      <Project>{acf89356-2a53-4e8f-ad84-2d2ce78e13e5}</Project>
+      <Name>YCompany.EPolicyPortal.ErrorHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YCompany.EPolicyPortal.NotificationService\YCompany.EPolicyPortal.NotificationService.csproj">
+      <Project>{165f0fa6-e7d6-4497-8eab-bf9e5a041a82}</Project>
+      <Name>YCompany.EPolicyPortal.NotificationService</Name>
     </ProjectReference>
     <ProjectReference Include="..\YCompany.EPolicyPortal.PersistenceLayer\YCompany.EPolicyPortal.PersistenceLayer.csproj">
       <Project>{a548781c-9947-42fb-a080-b79e4878352c}</Project>

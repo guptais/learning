@@ -22,20 +22,14 @@ namespace YCompany.EPolicyPortal.PersistenceLayer.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
-            var courses = new List<Product>
+          
+            var policies = new List<LifeInsurancePolicy>
             {
-                new Product {ProductName = "Insurance Product 1", SumAssured = 1000000, TimePeriod = 10},
-                new Product {ProductName = "Insurance Product 2", SumAssured = 5000000, TimePeriod = 20},
-                new Product {ProductName = "Insurance Product 3", SumAssured = 100000, TimePeriod = 5},
+                new LifeInsurancePolicy {Name = "Insurance Product 1", SumAssured = 1000000, TimePeriod = 10, Active = true, PolicyNumber = "YCOMP-001"},
+                new LifeInsurancePolicy {Name = "Insurance Product 2", SumAssured = 5000000, TimePeriod = 20, Active = true, PolicyNumber = "YCOMP-002"},
+                new LifeInsurancePolicy {Name = "Insurance Product 3", SumAssured = 100000, TimePeriod = 5, Active = true, PolicyNumber = "YCOMP-003"},
             };
-            courses.ForEach(s => context.Products.Add(s));
+            policies.ForEach(s => context.Policies.AddOrUpdate(s));
             context.SaveChanges();
         }
     }

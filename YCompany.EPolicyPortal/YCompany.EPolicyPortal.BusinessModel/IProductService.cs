@@ -2,14 +2,16 @@
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using YCompany.EPolicyPortal.DTO;
+using YCompany.EPolicyPortal.DataModel;
 
 namespace YCompany.EPolicyPortal.BusinessModel
 {
     public interface IProductService
     {
-        IEnumerable<InsurancePolicy> GetAllProducts();
-        InsurancePolicy GetPolicy(int id);
-        void AddPolicy(InsurancePolicy policy);
+        IEnumerable<InsurancePolicyModel> ViewAllPolicies();
+        InsurancePolicyModel GetPolicy(int id);
+        void InsertPolicy(InsurancePolicyModel policyModel);
+        void UpdatePolicy(int id);
+        void DeletePolicy(int id);
     }
 }

@@ -16,7 +16,7 @@
     <RootNamespace>YCompany.EPolicyPortal.ServiceLayer</RootNamespace>
     <AssemblyName>YCompany.EPolicyPortal.ServiceLayer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <MvcBuildViews>false</MvcBuildViews>
+    <MvcBuildViews>true</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -259,9 +259,9 @@
       <Project>{ecd7f1b0-28aa-4c05-871a-a5f084919270}</Project>
       <Name>YCompany.EPolicyPortal.BusinessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\YCompany.EPolicyPortal.DTO\YCompany.EPolicyPortal.DTO.csproj">
+    <ProjectReference Include="..\YCompany.EPolicyPortal.DTO\YCompany.EPolicyPortal.DataModel.csproj">
       <Project>{c46405bd-371d-4d16-9422-ab5374a32a4d}</Project>
-      <Name>YCompany.EPolicyPortal.DTO</Name>
+      <Name>YCompany.EPolicyPortal.DataModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -312,7 +312,8 @@
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
+  </Target>-->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
   </Target>
-  <Target Name="AfterBuild">
-  </Target> -->
 </Project>

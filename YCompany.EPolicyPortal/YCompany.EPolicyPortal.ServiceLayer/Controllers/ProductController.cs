@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.Mvc;
-using Microsoft.Practices.Unity;
-using Unity.Mvc5;
 using YCompany.EPolicyPortal.BusinessModel;
-using YCompany.EPolicyPortal.DTO;
+using YCompany.EPolicyPortal.DataModel;
 
 namespace YCompany.EPolicyPortal.ServiceLayer.Controllers
 {
@@ -22,30 +16,33 @@ namespace YCompany.EPolicyPortal.ServiceLayer.Controllers
         }
 
         // GET: api/Product
-        public IEnumerable<InsurancePolicy> Get()
+        public IEnumerable<InsurancePolicyModel> Get()
         {
-            return _productService.GetAllProducts();
+            return _productService.ViewAllPolicies();
         }
 
         // GET: api/Product/5
         public string Get(int id)
         {
-            return "value";
+            throw new NotImplementedException();
         }
 
         // POST: api/Product
         public void Post([FromBody]string value)
         {
+            throw new NotImplementedException();
         }
 
         // PUT: api/Product/5
         public void Put(int id, [FromBody]string value)
         {
+            throw new NotImplementedException();
         }
 
         // DELETE: api/Product/5
         public void Delete(int id)
         {
+            throw new NotImplementedException();
         }
     }
 }

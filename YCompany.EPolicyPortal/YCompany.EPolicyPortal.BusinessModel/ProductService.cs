@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using YCompany.EPolicyPortal.DTO;
+using YCompany.EPolicyPortal.DataModel;
 using YCompany.EPolicyPortal.PersistenceLayer.Entities;
 
 namespace YCompany.EPolicyPortal.BusinessModel
@@ -16,35 +16,45 @@ namespace YCompany.EPolicyPortal.BusinessModel
             _unitOfWorkFactory = unitOfWorkFactory;
             Mapper.Initialize(cfg =>
             {
-                cfg.CreateMap<Product, InsurancePolicy>();
+                cfg.CreateMap<LifeInsurancePolicy, InsurancePolicyModel>();
             });
         }
 
-        public IEnumerable<InsurancePolicy> GetAllProducts()
+        public IEnumerable<InsurancePolicyModel> ViewAllPolicies()
         {
             using (var uow = _unitOfWorkFactory.Create())
             {   
-                var products = uow.Repository<Product>().Get();
-                return products.Select(product => Mapper.Map<Product, InsurancePolicy>(product)).ToList();
+                var products = uow.Repository<LifeInsurancePolicy>().Get();
+                return products.Select(product => Mapper.Map<LifeInsurancePolicy, InsurancePolicyModel>(product)).ToList();
             }
         }
 
-        public InsurancePolicy GetPolicy(int id)
+        public InsurancePolicyModel GetPolicy(int id)
         {
             using (var uow = _unitOfWorkFactory.Create())
             {
-                var product = uow.Repository<Product>().GetByID(id);
-                return Mapper.Map<Product, InsurancePolicy>(product);
+                var product = uow.Repository<LifeInsurancePolicy>().GetByID(id);
+                return Mapper.Map<LifeInsurancePolicy, InsurancePolicyModel>(product);
             }
         }
 
-        public void AddPolicy(InsurancePolicy policy)
+        public void InsertPolicy(InsurancePolicyModel policyModel)
         {
             using (var uow = _unitOfWorkFactory.Create())
             {  
-                var product = Mapper.Map<InsurancePolicy, Product>(policy);
-                uow.Repository<Product>().Insert(product);
+                var product = Mapper.Map<InsurancePolicyModel, LifeInsurancePolicy>(policyModel);
+                uow.Repository<LifeInsurancePolicy>().Insert(product);
             }
+        }
+
+        public void UpdatePolicy(int id)
+        {
+            
+        }
+
+        public void DeletePolicy(int id)
+        {
+            
         }
     }
 }

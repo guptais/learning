@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using YCompany.EPolicyPortal.BusinessModel;
 
 namespace YCompany.EPolicyPortal.ServiceLayer.Controllers
@@ -19,7 +15,7 @@ namespace YCompany.EPolicyPortal.ServiceLayer.Controllers
         // GET: ProductUI
         public ActionResult Index()
         {
-            var model = _productService.GetAllProducts();
+            var model = _productService.ViewAllPolicies();
             return View(model);
         }
     }
