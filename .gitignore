@@ -1,3 +1,5 @@
 /YCompany.EPolicyPortal/.nuget
 /YCompany.EPolicyPortal/.vs/config
 /YCompany.EPolicyPortal/YCompany.EPolicyPortal.Web/typings
+YCompany.EPolicyPortal/YCompany.EPolicyPortal.Web/node_modules/
+YCompany.EPolicyPortal/YCompany.EPolicyPortal.Web/libs/
