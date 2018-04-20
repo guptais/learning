@@ -1,18 +1,18 @@
 {
-    "name":"react-calculator",
-    "version":"0.1.0",
+    "name": "react-calculator",
+    "version": "0.1.0",
     "author": {
         "name": "Azeez Olaniran-Isha"
     },
-    "scripts":{
-       "start": "babel-node ./server/server.js" 
+    "scripts": {
+        "start": "babel-node ./server/server.js"
     },
     "dependencies": {
-        "babel-cli" :"^6.26.0"
+        "babel-cli": "^6.26.0"
     },
-    "devDependencies":{
-        "babel-preset-es2015":"^6.24.1",
-        "babel-preset-react":"^6.24.1",
+    "devDependencies": {
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
         "webpack": "^4.6.0"
     }
 }
