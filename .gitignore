@@ -3,3 +3,5 @@
 /YCompany.EPolicyPortal/YCompany.EPolicyPortal.Web/typings
 YCompany.EPolicyPortal/YCompany.EPolicyPortal.Web/node_modules/
 YCompany.EPolicyPortal/YCompany.EPolicyPortal.Web/libs/
+LearnReact/ReactWithRedux/node_modules
+.vscode/settings.json
